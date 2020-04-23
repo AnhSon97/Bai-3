@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let g = parseInt(prompt('nhap vao so nguyen'));
+    let s = [];
+
+    function isFibonacci(s) {
+        for (let i = 2; i < g; i++) {
+            s[0] = 1;
+            s[1] = 2;
+            s[i] = s[i - 1] + s[i - 2];
+        }
+        return s;
+    }
+
+    isFibonacci(s);
+    for (let i = 0; i < s.length; i++) {
+        if (g == s[i]) {
+            alert("Đúng");
+        } else {
+            alert("sai");
+        }
+    }
+
+</script>
+</body>
+</html>
